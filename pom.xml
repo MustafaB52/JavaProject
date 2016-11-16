@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>mustafa.com</groupId>
-  <artifactId>demo</artifactId>
+  <artifactId>JavaProj</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>demo</name>
+  <name>JavaProj</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -15,24 +15,18 @@
   </properties>
   <build>
 	<plugins>
-		<plugin>
-      <artifactId>maven-antrun-plugin</artifactId>
-      <executions>
-        <execution>
-          <id>copy</id>
-          <phase>prepare-package</phase>
-          <configuration>
-            <tasks>
-			  <mkdir dir="${basedir}/../testdir" />
-              <copy file="D:\Test_Maven\demo\src\main\java\mustafa\com\App.java" todir="D:\Test_Maven\demo"/>
-            </tasks>
-          </configuration>
-          <goals>
-            <goal>run</goal>
-          </goals>
-        </execution> 
-      </executions>
-    </plugin>
+	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.0.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+			 <mainClass>mustafa.com.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
 	</plugins>
   </build>
   <dependencies>
