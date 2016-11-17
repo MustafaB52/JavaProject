@@ -17,7 +17,7 @@ public class App
 	}
 	public static void main( String[] args )
     {
-        Logger logger = Logger.getLogger("javaLogger");
+        Logger logger = Logger.getLogger("App");
 		logger.log(Level.FINE, "Hello World");
     }
 }
