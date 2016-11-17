@@ -12,6 +12,6 @@ public class App
 	}
 	public static void main( String[] args )
     {
-		logger.log(Level.FINE, "Hello World");
+		logger.log(Level.FINE, "This is my updated greeting : Hello People");
     }
 }
