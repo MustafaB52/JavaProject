@@ -1,5 +1,10 @@
 package mustafa.com;
 
+import java.util.logging.Logger;
+
+// assumes the current class is called MyLogger
+//private final static Logger LOGGER = Logger.getLogger(MyLogger.class.getName());
+
 /**
  * Hello world!
  *
@@ -12,6 +17,7 @@ public class App
 	}
 	public static void main( String[] args )
     {
-        System.out.println("Hello World!");
+        Logger logger = Logger.getLogger("javaLogger");
+		logger.log(Level.FINE, "Hello World");
     }
 }
